@@ -1,11 +1,16 @@
 import React from "react";
 
-function Dashboard() {
+function dashboard(props) {
+  const { strikeScore, ballScore, foulScore, hitScore } = props.play;
+  console.log(props);
   return (
-    <div className="Dashboard">
-      <p>dashboard component</p>
+    <div>
+      <button onClick={strikeScore}>STRIKE</button>
+      <button onClick={ballScore}>BALL</button>
+      <button onClick={foulScore}>FOUL</button>
+      <button onClick={hitScore}>HIT</button>
     </div>
   );
 }
 
-export default Dashboard;
+export default dashboard;
