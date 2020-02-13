@@ -17,5 +17,11 @@ test("ball is found", () => {
 });
 
 it("sanity test", () => {
+  expect([2, 3]).toEqual([2, 3]);
   expect(9).toBe(9);
+  expect(9).toBeGreaterThan(8);
+});
+
+it("foul ball", () => {
+  expect(2).not.toBe(3);
 });

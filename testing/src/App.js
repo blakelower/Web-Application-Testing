@@ -9,7 +9,7 @@ function App() {
   const [fouls, setFouls] = useState(0);
   const [hits, setHits] = useState(0);
 
-  const actions = {
+  const playBall = {
     strikeScore: () => {
       setStrikes(strikes + 1);
       if (strikes === 2) {
@@ -45,7 +45,7 @@ function App() {
         foulScore={fouls}
         hitScore={hits}
       />
-      <Dashboard play={actions} />
+      <Dashboard play={playBall} />
     </div>
   );
 }
